@@ -1,0 +1,16 @@
+name: My First Workflow Compact
+on: push
+
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: List and read files
+        run: |
+          echo "Hello Github Actions, from My First Workflow, but this is a compact version with multi-line command"
+          ls -ltra
+          cat README.md
