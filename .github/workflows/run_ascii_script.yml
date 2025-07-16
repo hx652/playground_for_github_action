@@ -18,5 +18,13 @@ jobs:
         run: ls -ltra
 
 
-      - name: Run Script
-        run: ./ascii-script.sh
+      - name: Make script executable then run it
+        run: |
+          chmod +x ./ascii-script.sh
+          ./ascii-script.sh
+          
+
+      - name: After all, check permission
+        run: |
+          echo "After chmod"
+          ll -a
