@@ -27,4 +27,4 @@ jobs:
       - name: After all, check permission
         run: |
           echo "After chmod"
-          ll -a
+          ls -ltra
